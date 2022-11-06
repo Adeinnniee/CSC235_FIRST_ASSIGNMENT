@@ -13,6 +13,7 @@ int main(){
     printf("\nType in the sentence you want to reverse: ");
     fgets(user_chosen_sentence, 150, stdin);
     int sentence_length = strlen(user_chosen_sentence);
+    printf("The reverse sentence is: ");
     for(int reverse_index = sentence_length ; reverse_index >= 0; reverse_index--){
         printf("%c", user_chosen_sentence[reverse_index]);
     }
@@ -35,11 +36,11 @@ int main(){
     if(determinant < 0){
         double real_root_part = (-coefficient_b) / (2 * coefficient_a);
         double imaginary_root_part = (sqrt(-determinant)) / (2 * coefficient_a);
-        printf("The roots of the quadratic equation are %f + %fi and %f - %fi.", real_root_part, imaginary_root_part, real_root_part, imaginary_root_part);
+        printf("The roots of the quadratic equation are %lf + %lfi and %lf - %lfi.", real_root_part, imaginary_root_part, real_root_part, imaginary_root_part);
     } else{
         double root_1 = ((-coefficient_b) + (sqrt(determinant))) / (2.0 * coefficient_a);
         double root_2 = ((-coefficient_b) - (sqrt(determinant))) / (2.0 * coefficient_a);
-        printf("The roots of the quadratic equation are %f and %f.", root_1, root_2);
+        printf("The roots of the quadratic equation are %lf and %lf.", root_1, root_2);
     }
 
 
